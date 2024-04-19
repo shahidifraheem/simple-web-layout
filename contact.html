@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shophetro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section class="contact-section padding-y">
+        <div class="wrapper">
+            <h1 class="title">Contact</h1>
+            <form method="post" action="/contact#ContactForm" id="ContactForm" accept-charset="UTF-8"
+                class="isolate scroll-trigger animate--slide-in"><input type="hidden" name="form_type"
+                    value="contact"><input type="hidden" name="utf8" value="✓">
+                <div class="contact__fields">
+                    <div class="field">
+                        <input class="field__input" autocomplete="name" type="text" id="ContactForm-name"
+                            name="contact[Name]" value="" placeholder="Name">
+                        <label class="field__label" for="ContactForm-name">Name</label>
+                    </div>
+                    <div class="field field--with-error">
+                        <input autocomplete="email" type="email" id="ContactForm-email" class="field__input"
+                            name="contact[email]" spellcheck="false" autocapitalize="off" value="" aria-required="true"
+                            placeholder="Email">
+                        <label class="field__label" for="ContactForm-email">Email
+                            <span aria-hidden="true">*</span></label>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel"
+                        name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number">
+                    <label class="field__label" for="ContactForm-phone">Phone number</label>
+                </div>
+                <div class="field">
+                    <textarea rows="10" id="ContactForm-body" class="text-area field__input" name="contact[Comment]"
+                        placeholder="Comment"></textarea>
+                    <label class="form__label field__label" for="ContactForm-body">Comment</label>
+                </div>
+                <div class="contact__button">
+                    <button type="submit" class="button">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

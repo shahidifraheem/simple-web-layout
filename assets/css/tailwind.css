@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0e1b4d;
+  --black-color: #000000;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  @apply text-base sm:text-lg;
+}
+
+img {
+  @apply max-w-full;
+}
+
+.padding-y {
+  @apply py-10 md:py-20;
+}
+
+.margin-y {
+  @apply my-10 md:my-20;
+}
+
+.wrapper {
+  @apply w-full max-w-[1200px] mx-auto px-4;
+}
+
+.banner {
+  @apply bg-cover bg-center bg-black bg-opacity-25 bg-blend-darken;
+}
+
+.banner-container {
+  color: var(--white-color);
+  @apply min-h-[400px] sm:min-h-[600px] flex justify-center items-center text-center;
+}
+
+.title {
+  color: var(--primary-color);
+  @apply text-3xl md:text-4xl font-semibold mb-2 sm:mb-5;
+}
+
+.normal-title {
+  color: var(--primary-color);
+  @apply text-xl sm:text-2xl font-semibold;
+}
+
+.banner-content h1 {
+  color: var(--white-color);
+  @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl;
+}
+
+.banner-content h2 {
+  @apply text-2xl sm:text-3xl font-semibold my-1;
+}
+
+.universal-btn, .contact-section button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  @apply inline-block px-10 py-3 no-underline font-medium mt-5 rounded-full;
+}
+
+.video-section {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.video-section .title {
+  color: var(--white-color);
+}
+
+.video-content {
+  @apply text-center;
+}
+
+.video-grid {
+  @apply mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-3;
+}
+
+.video-item i {
+  color: var(--primary-color);
+  @apply text-6xl;
+}
+
+.video-item h3 {
+  @apply text-xl font-semibold my-3;
+}
+
+.item-box + .item-box {
+  @apply mt-10;
+}
+
+.video-item .video {
+  border: 2px solid var(--primary-color);
+  @apply rounded-full w-[350px] h-[350px] relative overflow-hidden mx-auto;
+}
+
+.hr-cta-section {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.hr-cta-content {
+  @apply grid grid-cols-1 md:grid-cols-2 items-center;
+}
+
+.hr-cta-img img {
+  @apply w-full;
+}
+
+.hr-cta-detail {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  @apply p-14 md:rounded-tr-3xl md:rounded-br-3xl shadow-2xl md:-ml-20;
+}
+
+.title-underline:after {
+  content: "";
+  border-bottom: 2px solid var(--primary-color);
+  @apply pb-1 block w-32;
+}
+
+.custom-cta-content {
+  @apply flex flex-wrap items-center gap-5 md:gap-0;
+}
+
+.custom-cta-detail {
+  @apply w-full md:w-3/4 md:pr-20;
+}
+
+.custom-cta-img {
+  @apply w-full md:w-3/12;
+}
+
+.custom-cta-img img {
+  @apply rounded-3xl;
+}
+
+.slider-section {
+  @apply bg-cover bg-center;
+}
+
+.slider-section .wrapper{
+  @apply px-0
+}
+
+.slider-container {
+  @apply px-10 sm:px-20 md:px-28 lg:px-40;
+}
+
+.slider-container .slick-prev{
+  @apply left-0
+}
+
+.slider-container .slick-next{
+  @apply right-5
+}
+
+.content-slide {
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  @apply p-20 rounded-3xl shadow-2xl text-center;
+}
+
+.slick-prev {
+  @apply left-2;
+}
+
+.slick-next {
+  @apply right-2;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: var(--black-color);
+  @apply text-4xl opacity-40;
+}
+
+.makeup-container {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-10 items-center;
+}
+
+.makeup-content > p {
+  @apply mb-10;
+}
+
+.makeup-box {
+  @apply mb-8 flex items-center gap-10;
+}
+
+.circle-icon {
+  @apply w-24 h-24 shrink-0;
+}
+
+.circle-icon img {
+  border: 1px solid var(--primary-color);
+  @apply rounded-full p-2 w-24 h-24;
+}
+
+.custom-dark-cta-section{
+  background-color: var(--black-color);
+}
+
+.custom-dark-cta-section .custom-cta-detail{
+  color: var(--white-color);
+  @apply pr-0 md:pl-20
+}
+
+.customers-container{
+  @apply grid grid-cols-1 md:grid-cols-2 gap-10 items-center
+}
+
+.customer-reviews{
+  color: var(--white-color);
+  background-color: var(--black-color);
+  @apply rounded-3xl relative overflow-hidden
+}
+
+.review-slide{
+  @apply p-10
+}
+
+.review-slide .avatar img{
+  @apply rounded-full
+}
+
+.review-header{
+  @apply flex items-center gap-10
+}
+
+.review-person h3{
+  @apply text-xl font-medium
+}
+
+.review-person strong{
+  @apply font-normal text-gray-300
+}
+
+.review-detail{
+  @apply my-6
+}
+
+.review-stars{
+  @apply text-yellow-400 flex items-center gap-2
+}
+
+.customer-reviews-slider .slick-next:before, .customer-reviews-slider .slick-prev:before{
+  @apply hidden
+}
+
+.customer-reviews-slider .slick-arrow{
+  @apply text-xl text-gray-500 opacity-0 transition-all z-10
+}
+
+.customer-reviews-slider:hover .slick-arrow{
+  @apply opacity-100
+}
+
+.customer-img img{
+  @apply rounded-3xl
+}
+
+.faqs-section{
+  background-color: var(--black-color);
+}
+
+.faqs-section .title{
+  color: var(--white-color);
+  @apply text-center
+}
+
+.faqs-container{
+  @apply mt-10
+}
+
+.faq-accordion{
+  background-color: var(--white-color);
+  color: var(--black-color);
+  @apply rounded-3xl mb-5
+}
+
+.faq-question{
+  @apply p-4 font-medium flex gap-3 items-center cursor-pointer relative
+}
+
+.faq-question:after{
+  content: "";
+  background-color: transparent;
+  height: 1px;
+  @apply block mx-auto absolute bottom-0 left-8 right-8
+}
+
+.faq-accordion.active .faq-question:after{
+  background-color: var(--black-color);
+}
+
+.faq-answer{
+  @apply py-4 px-8 text-base hidden
+}
+
+.policy-section{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.policy-container{
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5
+}
+
+.policy-info{
+  @apply flex items-center gap-5 md:justify-start justify-center
+}
+
+.policy-icon{
+  @apply text-3xl
+}
+
+.policy-detail h3{
+  @apply text-lg font-semibold mb-1
+}
+
+.policy-detail p{
+  @apply text-gray-200 text-base
+}
+
+.about-container{
+  @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20
+}
+
+.about-img img{
+  @apply h-full object-cover rounded-3xl md:rounded-none md:rounded-tl-3xl md:rounded-bl-3xl
+}
+
+.about-detail{
+  @apply md:py-14
+}
+
+.contact-section input, .contact-section textarea{
+  @apply w-full rounded-full h-11 px-5 py-1 border border-gray-300
+}
+
+.contact-section input::placeholder, .contact-section textarea::placeholder{
+  @apply opacity-0
+}
+
+.contact-section textarea{
+  @apply h-auto rounded-3xl
+}
+
+.contact-section .field{
+  @apply mb-5 relative
+}
+
+.contact-section .field label{
+  @apply absolute top-2.5 left-5 -translate-y-1/2 text-gray-500
+}
+
+.contact-section .contact__fields{
+  @apply grid grid-cols-1 sm:grid-cols-2 sm:gap-5
+}
